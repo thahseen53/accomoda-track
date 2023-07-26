@@ -3,8 +3,8 @@ import { useLogin } from "../loginHooks/useLogin";
 import { loginGuest } from "../../../services/apiAuthentication";
 import Spinner from "../../../components/Spinner";
 const LoginForm = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("thahsi@gmail.com");
+  const [password, setPassword] = useState("pass123");
   const { loginUser, isLoading } = useLogin();
   const handleSubmit = (e) => {
     e.preventDefault();
