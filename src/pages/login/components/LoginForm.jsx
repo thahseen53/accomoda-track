@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLogin } from "../loginHooks/useLogin";
 import { loginGuest } from "../../../services/apiAuthentication";
+import Spinner from "../../../components/Spinner";
 const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -13,6 +14,9 @@ const LoginForm = () => {
   // const handleClick = () => {
   //   loginGuest();
   // };
+  if (isLoading) {
+    return <Spinner />;
+  }
   return (
     <div className="py-2">
       <form className="flex flex-col gap-3 w-full py-2" onSubmit={handleSubmit}>
