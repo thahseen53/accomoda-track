@@ -10,7 +10,7 @@ const LoginForm = () => {
     loginUser({ email, password });
   };
   const handleClick = () => {
-    loginUser({ email: "thahsi@.com", password: "pass123" });
+    loginUser({ email: "thahsi@gmail.com", password: "pass123" });
   };
   return (
     <div className="py-2">
