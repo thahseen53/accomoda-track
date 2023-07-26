@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { TbLayoutDashboard, TbSettingsPlus } from "react-icons/tb";
 import { BsCardChecklist } from "react-icons/bs";
 import { LuHotel } from "react-icons/lu";
-import { AiOutlineUserAdd } from "react-icons/Ai";
+import { AiOutlineUserAdd } from "react-icons/ai";
 
 const SideBar = ({ setOpenMenu }) => {
   return (
