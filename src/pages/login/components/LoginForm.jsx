@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useLogin } from "../loginHooks/useLogin";
+import { loginGuest } from "../../../services/apiAuthentication";
 const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -10,7 +11,7 @@ const LoginForm = () => {
     loginUser({ email, password });
   };
   const handleClick = () => {
-    loginUser({ email: "thahsi@gmail.com", password: "pass123" });
+    loginGuest();
   };
   return (
     <div className="py-2">

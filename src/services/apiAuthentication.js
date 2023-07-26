@@ -25,6 +25,16 @@ export const login = async ({email,password})=>{
     }
     return data
 }
+export const loginGuest = async ({email,password})=>{
+    let { data, error } = await supabase.auth.signInWithPassword({
+        email:"thahsi@gmail.com",
+        password:"pass123"
+      })
+    if(error){
+        throw new Error(error.message)
+    }
+    return data
+}
 
 export const currentUser = async ()=>{
     let {data:session} = await supabase.auth.getSession()
