@@ -9,6 +9,9 @@ const LoginForm = () => {
     if (!email || !password) return;
     loginUser({ email, password });
   };
+  const handleClick = () => {
+    loginUser({ email: "thahsi@.com", password: "pass123" });
+  };
   return (
     <div className="py-2">
       <form className="flex flex-col gap-3 w-full py-2" onSubmit={handleSubmit}>
@@ -46,6 +49,13 @@ const LoginForm = () => {
           Login
         </button>
       </form>
+      <button
+        type="submit"
+        className="p-2 text-white font-bold my-2 rounded-lg bg-[#FF8500]"
+        onClick={() => handleClick}
+      >
+        Login as guest
+      </button>
     </div>
   );
 };
