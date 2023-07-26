@@ -1,4 +1,4 @@
-import Logout from "../logout/logout";
+import Logout from "../logout/Logout";
 import UserDetails from "./UserDetails";
 
 const Header = () => {
